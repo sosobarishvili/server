@@ -15,7 +15,6 @@ export const generateBook = (userSeed, bookIndex, likes, reviews) => {
 
   const book = {
     id: `isbn-${userSeed}-${bookIndex}`,
-    index: bookIndex + 1,
     isbn: faker.commerce.isbn(),
     title: faker.commerce.productName(),
     authors: authors,
