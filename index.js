@@ -35,7 +35,7 @@ app.get('/api/books', (req, res) => {
   const books = [];
   for (let i = 0; i < pageSize; i++) {
     const bookIndex = startIndex + i;
-    const newBook = generateBook(userSeed, bookIndex, avgLikes, avgReviews);
+    const newBook = generateBook(userSeed, startIndex + i, avgLikes, avgReviews);
     const localizedFaker = fakers[region] || fakerEN_US;
     localizedFaker.seed(userSeed + bookIndex);
     const authorCount = localizedFaker.number.int({ min: 1, max: 2 });
